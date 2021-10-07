@@ -1,0 +1,1452 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix { height: auto; margin-top: 16px; margin-bottom: 16px; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow-y: auto; padding-bottom: 30px; padding-top: 60px; width: 300px; overflow-x: hidden; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow-y: hidden; overflow-x: auto; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color : #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Amazon Ember", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color      : rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width     : 860px;
+    margin        : 0 auto;
+    padding       : 30px;
+    padding-bottom: 100px;
+}
+
+#write>ul:first-child,
+#write>ol:first-child {
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position     : relative;
+    margin-top   : 1rem;
+    margin-bottom: 1rem;
+    font-weight  : bold;
+    line-height  : 1.4;
+    cursor       : text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h1 {
+    padding-bottom: .3em;
+    font-size     : 2.25em;
+    line-height   : 1.2;
+    border-bottom : 1px solid #eee;
+}
+
+h2 {
+    padding-bottom: .3em;
+    font-size     : 1.75em;
+    line-height   : 1.225;
+    border-bottom : 1px solid #eee;
+}
+
+h3 {
+    font-size  : 1.5em;
+    line-height: 1.43;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 1em;
+    color    : #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+
+hr {
+    height          : 2px;
+    padding         : 0;
+    margin          : 16px 0;
+    background-color: #e7e7e7;
+    border          : 0 none;
+    overflow        : hidden;
+    box-sizing      : content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding    : 0 15px;
+    color      : #777777;
+}
+
+blockquote blockquote {
+    padding-right: 0;
+}
+
+table {
+    padding   : 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin    : 0;
+    padding   : 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+
+table tr th {
+    font-weight  : bold;
+    border       : 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin       : 0;
+    padding      : 6px 13px;
+}
+
+table tr td {
+    border : 1px solid #dfe2e5;
+    margin : 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border          : 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius   : 3px;
+    padding         : 0;
+    padding         : 2px 4px 0px 4px;
+    font-size       : 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding         : 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom : 15px;
+    margin-top    : 15px;
+    padding-top   : 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+#write pre.md-meta-block {
+    padding         : 1rem;
+    font-size       : 85%;
+    line-height     : 1.45;
+    background-color: #f7f7f7;
+    border          : 0;
+    border-radius   : 3px;
+    color           : #777777;
+    margin-top      : 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+    bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before {
+    left: -1.5625rem;
+    top : .375rem;
+}
+
+#write>h4.md-focus:before {
+    left: -1.5625rem;
+    top : .285714286rem;
+}
+
+#write>h5.md-focus:before {
+    left: -1.5625rem;
+    top : .285714286rem;
+}
+
+#write>h6.md-focus:before {
+    left: -1.5625rem;
+    top : .285714286rem;
+}
+
+.md-image>.md-meta {
+    /*border     : 1px solid #ddd;*/
+    border-radius: 3px;
+    padding      : 2px 0px 0px 4px;
+    font-size    : 0.9em;
+    color        : inherit;
+}
+
+.md-tag {
+    color  : #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc {
+    margin-top    : 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border          : 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color    : #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style    : solid;
+    border-width    : 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color     : white;
+    background: #999;
+}
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;}
+</style><title>README-foundational</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<style type="text/css">
+    #ssb_alexa_blue {
+        background-color: #3366ff;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #3366ff;
+        border-radius: 2px;
+        white-space: nowrap
+    }
+    #ssb_alexa_ocean {
+        background-color: #00a0d2;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #00a0d2;
+        white-space: nowrap
+    }
+    #ssb_alexa_sand {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        font-size: 90%;
+        color: #00a0d2;
+        position: relative;
+        top: -1px;
+        border-color: #dcdcdc;
+        border-style: solid;
+        border-width: 2px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_alexa_white {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #00a0d2;
+        position: relative;
+        top: -1px;
+        border-color: #00a0d2;
+        border-style: solid;
+        border-width: 2px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_blue {
+        background-color: #257ACF;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        border-radius: 5px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_catalog_orange {
+        background-color: #E36000;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        border-radius: 1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_catalog_red {
+        background-color: #D90000;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        border-radius: 5px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_dark_blue {
+        color: white;
+        background-color: darkblue;
+        border-radius: 3px;
+        padding: 0px 6px;
+        white-space: nowrap
+    }
+    #ssb_grafana_blue {
+        background-color: #00678b;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #00678b;
+        border-radius: 2px;
+        white-space: nowrap
+    }
+    #ssb_grafana_green {
+        background-color: #629300;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #629300;
+        border-radius: 2px;
+        white-space: nowrap
+    }
+    #ssb_grafana_orange {
+        background-color: #ec8427;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #ec8427;
+        border-radius: 2px;
+        white-space: nowrap
+    }
+    #ssb_grey {
+        background-color: #DEDEDE;
+        font-weight: bold;
+        font-size: 90%;
+        color: #444;
+        position: relative;
+        top: -1px;
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #444;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_grey_square {
+        background-color: #DEDEDE;
+        font-weight: bold;
+        font-size: 90%;
+        color: #444;
+        position: relative;
+        top: -1px;
+        border-radius: 1px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #444;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_iot_blue {
+        background-color: #00A1C9;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #00A1C9;
+        border-radius: 2px;
+        white-space: nowrap
+    }
+    #ssb_iot_grey {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: gray;
+        position: relative;
+        top: -1px;
+        border-color: gray;
+        border-radius: 2px;
+        border-style: solid;
+        border-width: 1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_iot_white {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #00A1C9;
+        position: relative;
+        top: -1px;
+        border-color: #00A1C9;
+        border-radius: 2px;
+        border-style: solid;
+        border-width: 1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_kibana_blue {
+        background-color: #0079a5;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #0079a5;
+        border-radius: 2px;
+        white-space: nowrap
+    }
+    #ssb_kibana_white {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #0079a5;
+        position: relative;
+        top: -1px;
+        border-color: #0079a5;
+        border-radius: 2px;
+        border-width: 1px;
+        border-style: solid;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_lambda_orange {
+        background-color: #ec7211;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_lambda_white {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #545b64;
+        position: relative;
+        top: -1px;
+        border-color: #545b64;
+        border-radius: 2px;
+        border-width: 1px;
+        border-style: solid;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_maroon {
+        color: white;
+        background-color: darkred;
+        border-radius: 3px;
+        padding: 0px 6px;
+        white-space: nowrap
+    }
+    #ssb_orange {
+        background-color: #ec7211;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssl_orange {
+        color: #ec7211;
+        font-weight: bold
+    }
+    #ssb_orange_oval {
+        background-color: #ec7211;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 20px;
+        white-space: nowrap
+    }
+    #ssb_oval {
+        background-color: #DEDEDE;
+        font-weight: bold;
+        font-size: 90%;
+        color: #444;
+        position: relative;
+        top: -1px;
+        border-radius: 20px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #444;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ssb_start_lab {
+        background-color: #34A853;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        border-radius: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px
+    }
+    #ssb_open_console {
+        background-color: white;
+        font-family: Google Sans;
+        font-weight: bold;
+        font-size: 90%;
+        color: #1a73e8;
+        border-color: #dadce0;
+        border-radius: 4px;
+        border-width: 2px;
+        border-style: solid;
+        outline-color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+    #ssb_rds_white {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #545b64;
+        position: relative;
+        top: -1px;
+        border-color: #545b64;
+        border-radius: 2px;
+        border-width: 1px;
+        border-style: solid;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ssb_red {
+        background-color: #D93025;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        border-radius: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px
+    }
+    #ssb_red_oval {
+        background-color: #D93025;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 20px;
+        white-space: nowrap
+    }
+    #ssb_s3_blue {
+        background-color: #329AD6;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ssb_s3_white {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #329AD6;
+        position: relative;
+        top: -1px;
+        border-color: #329AD6;
+        border-width: 1px;
+        border-style: solid;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ssb_services {
+        background-color: #232f3e;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ssb_square_lex {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #1166bb;
+        position: relative;
+        top: -1px;
+        border-color: #c4cbcd;
+        border-style: solid;
+        border-width: 2px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+    #ssb_ssm_white {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #545b64;
+        position: relative;
+        top: -1px;
+        border-color: #545b64;
+        border-radius: 2px;
+        border-width: 1px;
+        border-style: solid;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ssb_white {
+        background-color: white;
+        font-weight: bold;
+        font-size: 90%;
+        color: #545b64;
+        position: relative;
+        top: -1px;
+        border-color: #545b64;
+        border-radius: 2px;
+        border-width: 1px;
+        border-style: solid;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ssbox_cloudformation_blue {
+        font-weight: bold;
+        background-color: #f1faff;
+        font-size: 90%;
+        border-color: #00A1C9;
+        border-width: 1px;
+        border-style: solid;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ssl_alexa_ocean {
+        color: #00a0d2;
+        font-weight: bold
+    }
+    #ssl_blue {
+        color: #1166bb;
+        font-weight: bold
+    }
+    #ssl_catalog_orange {
+        color: #E16706;
+        font-weight: bold
+    }
+    #ssb_codestar_blue {
+        background-color: #329AD6;
+        font-weight: bold;
+        font-size: 80%;
+        color: white;
+        position: relative;
+        top: -1px;
+        border-radius: 1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap
+    }
+    #ssb_cognito_blue {
+        background-color: #2a7fd4;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #0055aa;
+        border-radius: 2px;
+        white-space: nowrap
+    }
+    #ssb_eb_blue {
+        background-color: #0f6dca;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #0055aa;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        white-space: nowrap;
+    }
+    #ssb_eb_grey {
+        background-color: #e5e5e5;
+        font-weight: bold;
+        font-size: 90%;
+        color: 444444;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #bbbbbb;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        white-space: nowrap
+    }
+    #ssb_voc_grey {
+        background-color: #F2F3F4;
+        font-size: 90%;
+        color: black;
+        position: relative;
+        top: -1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: grey;
+        border-width: 1px;
+        border-style: solid;
+        white-space: nowrap
+    }
+</style>
+
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"><h1 id='learner-lab---foundational-level'><span>Learner Lab - Foundational Level</span></h1><p><a href="#envOverview"><span>Environment Overview</span></a><br>
+<a href="#envNav"><span>Environment Navigation </span></a><br>
+<a href="#mgmtConsole"><span>Access the AWS Management Console </span></a><br>
+<a href="#regionRest"><span>Region restriction </span></a><br>
+<a href="#services"><span>Service usage and other restrictions </span></a><br>
+<a href="#terminal"><span>Using the terminal in the browser </span></a><br>
+<a href="#clicommands"><span>Running AWS CLI commands </span></a><br>
+<a href="#sdk"><span>Using the AWS SDK for Python </span></a><br>
+<a href="#ec2"><span>Accessing EC2 Instance(s) </span></a><br>
+<a href="#ssh"><span>SSH Access to EC2 Instances </span></a><br>
+<a href="#sshwindows"><span>SSH access from Windows</span></a><br>
+<a href="#sshmac"><span>SSH access from a Mac</span></a></p><p>&nbsp;</p><h3 id='a-idenvoverviewaenvironment-overview'><a id="envOverview"></a><span>Environment Overview</span></h3><p><i class="fas fa-exclamation-triangle" style="color:red"></i><span> We have discovered a security vulnerability in AWS Academy Learner Labs. To protect you and your students, we have temporarily updated the lab policy applied to Learner Labs to prevent misuse. We have a team working on designing a solution that prevents this exploit while retaining your flexibility to use Learner Labs. While we are working on this, some features may not work as published. We will provide an update as soon as we have a resolution in place. Thank you for your patience.  As always, if you need support reach out to us at </span><a href='mailto:support@awsacademy.com' target='_blank' class='url'>support@awsacademy.com</a><span>.</span></p><p><span>This Learner Lab provides a sandbox environment for ad-hoc exploration of AWS services.</span></p><p><strong><span>This environment is long-lived</span></strong><span>. When the session timer runs to 0:00, the session will end, but any data and resources that you created in the AWS account will be retained. Running resources (such as an EC2 instance) may be stopped. If you later launch a new session (for example, the next day), you will find that your work is still in the lab environment. However, you may need to manually start any stopped resources.</span></p><p><i class="fas fa-exclamation-triangle" style="color:red"></i><span> </span><strong><span>IMPORTANT</span></strong><span>: Monitor your lab budget in the lab interface above. Whenever you have an active lab session, the latest known remaining budget information will display at the top of this screen. This data comes from AWS Budgets which typically updates every 8 to 12 hours. Therefore </span><em><span>the remaining budget that you see may not reflect your most recent account activity</span></em><span>.  </span><strong><u><span>If you exceed your lab budget your lab account will be disabled and all progress and resources will be lost</span></u></strong><span>. Therefore, it is important for you to manage your spending. </span><em><span>Suggestions to avoid overspending</span></em><span>: Launch only the number of instances you need, sized to your requirements. Stop EC2 and RDS instances when not in use. Delete no longer needed resources and data.</span></p><p>&nbsp;</p><h3 id='a-idenvnavaenvironment-navigation'><a id="envNav"></a><span>Environment Navigation</span></h3><p><span>Use the </span><i class="fas fa-info"></i><span> </span><strong><span>Readme</span></strong><span> link above to return to these instructions at any time.</span></p><p><span>Use the </span><i class="fas fa-info"></i><span> </span><strong><span>AWS Details</span></strong><span> link above to access information about your environment.</span></p><p><span>After you start the lab, the AWS Details panel will display and you will need to choose </span><strong><span>Readme</span></strong><span> to return to these instructions.</span></p><p><i class="fas fa-check-circle"></i><span> </span><strong><span>Tip:</span></strong><span> you can resize this panel at anytime by dragging the bar to the left of these instructions to make it wider or narrower.</span></p><p><span>Use the </span><i class="fas fa-undo"></i><span> </span><strong><span>Reset</span></strong><span> link above if you ever want to reset your AWS account back to the way it was in the beginning, before you ever ran sessions of this lab environment.  </span><i class="fas fa-exclamation-triangle" style="color:red"></i><span> </span><strong><em><span>CAUTION</span></em></strong><span>: if you choose reset and then choose Yes to confirm that you do want to reset, you will </span><em><span>permanently delete</span></em><span> everything that you have created or stored in the AWS account.</span></p><p><span>The terminal window to the left of these instructions can be used to run AWS CLI commands or code such as AWS SDK for Python code (details provided below).</span></p><p>&nbsp;</p><h3 id='a-idmgmtconsoleaaccess-the-aws-management-console'><a id="mgmtConsole"></a><span>Access the AWS Management Console</span></h3><ol start='' ><li><p><span>At the top of these instructions, choose </span><br><span> </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Start Lab</span></strong><span> to start the lab session.</span></p><ul><li><p><span>The lab session is started and session information is displayed.</span></p></li><li><p><span>A timer above shows the time remaining in the session.</span></p><p><i class="fas fa-check-circle"></i><span> </span><strong><span>Tip:</span></strong><span> You can refresh the session length at any time by choosing Start Lab again before the timer reaches 0:00.</span></p></li></ul></li><li><p><span>Choose the </span><i class="fas fa-info"></i><span> Readme link to return to these instructions.</span></p></li><li><p><span>Connect to the AWS Management Console by choosing the </span><strong><span>AWS</span></strong><span> link above the terminal window.</span></p><ul><li><p><span>You should be connected to the AWS Management Console.</span></p><p><strong><span>Tip</span></strong><span>: If a new browser tab does not open, a banner or icon is usually at the top of your browser with the message that your browser is preventing the site from opening pop-up windows. Choose the banner or icon, and then choose </span><strong><span>Allow pop-ups</span></strong><span>.</span></p><p><i class="fas fa-info-circle"></i><span> </span><strong><span>Tip</span></strong><span>: if you are interested in interacting with the AWS account programmatically, read the </span><a href="#terminal"><span>Configuring and using the terminal in the browser</span></a><span> section below for details.</span></p></li></ul></li></ol><h2 id='a-idregionrestaregion-restriction'><a id="regionRest"></a><span>Region restriction</span></h2><p><span>All service access is limited to the </span><strong><span>us-east-1</span></strong><span> and </span><strong><span>us-west-2</span></strong><span> Regions. If you load a service console page in another AWS Region you will see access error messages.</span></p><p>&nbsp;</p><h2 id='a-idservicesaservice-usage-and-other-restrictions'><a id="services"></a><span>Service usage and other restrictions</span></h2><p><span>The following services can be used. Specific limitations apply as documented.  Services restrictions are subject to change.</span></p><ul><li><p><span>Application Auto Scaling</span></p></li><li><p><span>Amazon Aurora</span></p></li><li><p><span>AWS Cloud9</span></p><ul><li><span>Supported Instance types: nano, micro, small, medium, large, and c4.xlarge.</span></li></ul></li><li><p><span>AWS CloudFormation</span></p></li><li><p><span>Amazon CloudFront</span></p></li><li><p><span>AWS CloudShell</span></p></li><li><p><span>AWS CloudTrail</span></p></li><li><p><span>Amazon CloudWatch</span></p></li><li><p><span>AWS CodeCommit</span></p></li><li><p><span>Amazon Cognito</span></p></li><li><p><span>Amazon Comprehend</span></p></li><li><p><span>AWS DeepRacer</span></p></li><li><p><span>Amazon DynamoDB</span></p></li><li><p><span>Amazon EC2 Auto Scaling</span></p><ul><li><span>Supported Instance types: nano, micro, small, medium, and large.</span></li><li><span>Maximum of 32 vCPU used by concurrently running instances in an AWS Region. For example, t2.micro instances use 1 vCPU each, so you could run up to 32 of them. However,  t3.large instances use 2 vCPUs each, so you can run up to 16 of them. You can run a mix of instance types as long as you do not exceed the 32 vCPU threshold. Note that you are also limited to launching no more than nine (9) instances (of any size) in a Region at once. </span><em><span>Recommendation</span></em><span>: size  to your actual need to avoid using up your cost budget.</span></li></ul></li><li><p><span>AWS Elastic Beanstalk</span></p><ul><li><span>Supported Instance types: nano, micro, small, medium, and large. If you attempt to launch a larger instance type, it will be terminated.</span></li><li><span>When you first create an environment in the console, it will use the default security settings. However after the environment has been created, you may want to edit the configuration&#39;s security settings. Change the service role to </span><strong><span>LabRole</span></strong><span>. Similarly, set the IAM instance profile to </span><strong><span>LabInstanceProfile</span></strong><span>. If the environment is in the us-east-1 AWS Region, you could set the EC2 key pair to </span><strong><span>vockey</span></strong><span>.  These settings will give you more permissions than the defaults.</span></li></ul></li><li><p><span>Amazon Elastic Block Store (EBS)</span></p><ul><li><span>Maximum volume size is 100GB</span></li><li><span>PIOPs not supported</span></li></ul></li><li><p><span>Amazon Elastic Compute Cloud (EC2)</span></p><ul><li><p><span>Supported AMIs: AMIs where the owner is Amazon.</span></p><ul><li><span>To launch a </span><strong><em><span>Windows</span></em></strong><span> or </span><strong><em><span>Amazon Linux</span></em></strong><span> instance: Choose &quot;Launch Instances&quot;, then choose from the ones available in the &quot;Quick Start&quot; tab.</span></li><li><span>To launch an </span><strong><em><span>Ubuntu</span></em></strong><span> instance: In the EC2 Console, choose AMIs (on the left), change the dropdown next to the search bar to &quot;Public Images&quot;, click in the search bar and choose &quot;Owner&quot;, then choose &quot;Amazon images&quot;. Choose Add filter in the search bar again and choose &quot;Source&quot;, then type in &quot;amazon/Cloud9Ubuntu&quot;. Any of the AMIs in the result set should be launchable (tip: sort by AMI Name to see the latest). Choose the checkbox next to one and select Launch. Finally, login as the ubuntu user. For example, run this command in the terminal to the left of these instructions, where public-ip is the actual public IP address: </span><code>ssh -i ~/.ssh/labsuser.pem ubuntu@public-ip</code><span>.</span></li><li><span>To launch a </span><strong><em><span>C</span></em></strong><strong><em><span>entOS</span></em></strong><span> instance: follow the same steps as documented above for launching an Ubuntu instance, however, set the &quot;Source&quot; filter to &quot;amazon/CentOS&quot; (or for newer images set &quot;Source&quot; to &quot;amazon/aws-parallelcluster-2&quot;. Connect using SSH as the </span><em><span>centos</span></em><span> user. Tip: run </span><code>sudo yum update -y</code><span> after connecting, to apply the latest updates.</span></li><li><span>To launch a </span><strong><em><span>RHEL</span></em></strong><span> instance: follow the same steps as documented above for launching an Ubuntu instance, however, set the &quot;Source&quot; filter to  &quot;amazon/RHEL&quot;. Tip: the Red Hat AMIs with SQL express have lesser instance size requirements (for example, can as a t2.medium). Connect using SSH as </span><em><span>ec2-user</span></em><span>.</span></li></ul></li><li><p><span>Supported Instance types: nano, micro, small, medium, and large.</span></p></li><li><p><span>Instance quantity -  Maximum of 32 vCPU used by concurrently running instances in an AWS Region. For example, t2.micro instances use 1 vCPU each, so you could run up to 32 of them. However,  t3.large instances use 2 vCPUs each, so you can run up to 16 of them. You can run a mix of instance types as long as you do not exceed the 32 vCPU threshold. Note that you are also limited to launching no more than nine (9) instances (of any size) in a Region at once. </span><em><span>Recommendation</span></em><span>: size  to your actual need to avoid using up your cost budget.</span></p></li><li><p><span>On-Demand instances only</span></p></li><li><p><span>EBS volumes - sizes up to 100 GB and type must be General Purpose SSD (</span><code>gp2</code><span>, </span><code>gp3</code><span> ) cold HDD (</span><code>sc1</code><span>), or standard.</span></p></li><li><p><span>Key pairs - If you are creating an EC2 instance in any AWS Region other than us-east-1, the vockey key pair will not be available. In such cases, you should create a new key pair and download it when creating the EC2 instance. Then use the new key pair to connect to that instance.</span></p></li><li><p><span>A role named </span><strong><span>LabRole</span></strong><span> and an instance profile named </span><strong><span>LabInstanceProfile</span></strong><span> have been pre-created for you. You can attach the role (via the instance profile) to an EC2 instance when you want to access an EC2 instance (terminal in the browser) using AWS Systems Manager Session Manager. The role also grants permissions to any applications running on the instance to access many other AWS services from the instance.</span></p></li><li><p><strong><span>Tip</span></strong><span>: to preserve your lab budget, stop any running EC2 instances before you are done using the account for the day (or terminate them if not longer needed). When your session ends, the lab environment </span><em><span>may</span></em><span> place any running instances into a &#39;stopped&#39; state. Keep this in mind when you start a new session, that you may need to start the stopped instance(s). Also, instances that have been stopped and started again, will be assigned a new IPv4 public IP address unless you have an elastic IP address associated with the instance.</span></p></li></ul></li><li><p><span>Amazon Elastic Container Registry (ECR)</span></p></li><li><p><span>Amazon Elastic File System (EFS)</span></p></li><li><p><span>Amazon Elastic Inference</span></p></li><li><p><span>Elastic Load Balancing</span></p></li><li><p><span>Amazon EventBridge</span></p></li><li><p><span>Amazon Forecast</span></p></li><li><p><span>AWS Glue</span></p></li><li><p><span>AWS Glue DataBrew</span></p></li><li><p><span>AWS Identity and Access Management (IAM)</span></p><ul><li><p><span>Extremely limited access. You cannot create users or groups. You cannot create roles, except that you can create service-linked roles.</span></p></li><li><p><span>Service role creation is generally permitted. If the service needs to create a role for you, you may need to retry role creation if it fails the first time.</span></p></li><li><p><span>A role named </span><strong><span>LabRole</span></strong><span> has been pre-created for you. This role is designed to be used when you want to attach a role to a resource in an AWS service. It grants many AWS services access to other AWS services and has permissions very similar to the permissions you have as a user in the console.  </span></p><ul><li><span>Example use: attach the LabRole via the instance profile named </span><strong><span>LabInstanceProfile</span></strong><span> to an EC2 instance for terminal in the browser access to an EC2 instance guest OS using AWS Systems Manager Session Manager.</span></li><li><span>Another example: Attach the LabRole to a Lambda function so that the Lambda function can access S3, CloudWatch, RDS, or some other service.</span></li><li><span>Another example: Attach the LabRole to a SageMaker notebook instance so that the instance can access files in an S3 bucket.</span></li></ul></li></ul></li><li><p><span>AWS Key Management Service (KMS)</span></p></li><li><p><span>AWS Lambda</span></p><ul><li><strong><span>Tip</span></strong><span>: Attach the existing </span><strong><span>LabRole</span></strong><span> to any function that you create if that function will need permissions to interact with other AWS services.</span></li></ul></li><li><p><span>Amazon Lex</span></p></li><li><p><span>Amazon Lightsail</span></p><ul><li><span>If you choose  vCPU and memory specs that are too high (such as as 8 vCPU and 32GB) the instance may be terminated. Smaller sizes are supported.</span></li></ul></li><li><p><span>Amazon Marketplace Subscriptions (Amazon ML)</span></p><ul><li><span>Extremely limited read-only access.</span></li></ul></li><li><p><span>Amazon Polly</span></p></li><li><p><span>Amazon Rekognition</span></p></li><li><p><span>Amazon Relational Database Service (RDS)</span></p><ul><li><span>Supported instance types: nano, micro, small, and medium.</span></li><li><span>Supported database engines: Amazon Aurora, MySQL, PostgreSQL and MariaDB.</span></li><li><span>EBS volumes - size up to 100 GB and type General Purpose SSD (gp2).</span></li><li><span>On-Demand DB instance class types only</span></li><li><span>Multi-AZ deployments are not supported (choose Dev/Test or Free tier template if prompted and do not create a standby instance).</span></li><li><span>Enhanced monitoring is not supported (you must </span><em><span>uncheck</span></em><span> this default setting).</span></li><li><span>Tip: to preserve your lab budget, stop any running RDS instances before you are done using the account for the day (or terminate them if not longer needed). Be aware that if you do stop an RDS instance and leave it stopped for seven days, AWS will start it again automatically, which will increase the cost impact.</span></li></ul></li><li><p><span>AWS Resource Groups &amp; Tag Editor</span></p></li><li><p><span>AWS RoboMaker</span></p><ul><li><span>Supported Instance types for development environments: </span><em><span>nano</span></em><span>, </span><em><span>micro</span></em><span>, </span><em><span>small</span></em><span>, </span><em><span>medium</span></em><span>, </span><em><span>large</span></em><span>, and </span><em><span>c4.xlarge</span></em><span> only.</span></li></ul></li><li><p><span>Amazon SageMaker</span></p><ul><li><span>Supported instance types: </span><em><span>medium</span></em><span>, </span><em><span>large</span></em><span>, and </span><em><span>xlarge</span></em><span> only.</span></li><li><span>GPU instance types are not supported.</span></li></ul></li><li><p><span>AWS Secrets Manager</span></p></li><li><p><span>AWS Security Token Service (STS)</span></p></li><li><p><span>AWS Service Catalog</span></p></li><li><p><span>Amazon Simple Notification Service (SNS)</span></p></li><li><p><span>Amazon Simple Queue Service (SQS)</span></p></li><li><p><span>Amazon Simple Storage Service (S3)</span></p></li><li><p><span>Amazon Simple Storage Service Glacier (S3 Glacier)</span></p><ul><li><span>You cannot create a vault lock</span></li></ul></li><li><p><span>AWS Step Functions</span></p></li><li><p><span>AWS Systems Manager (SSM)</span></p><ul><li><span>A role named </span><strong><span>LabRole</span></strong><span> and an instance profile named </span><strong><span>LabInstanceProfile</span></strong><span> have been pre-created for you. You can attach the role (via the instance profile) to an EC2 instance when you want to access an EC2 instance (terminal in the browser) using AWS Systems Manager Session Manager.</span></li></ul></li><li><p><span>Amazon Textract</span></p></li><li><p><span>Amazon Translate</span></p></li><li><p><span>AWS Trusted Advisor</span></p></li><li><p><span>Amazon Virtual Private Cloud (Amazon VPC)</span></p></li><li><p><span>AWS Well-Architected Tool</span></p></li></ul><h2 id='a-idterminalausing-the-terminal-in-the-browser'><a id="terminal"></a><span>Using the Terminal in the browser</span></h2><p><span>A terminal window displays to the left of these instructions. The terminal provides access to a Linux shell on a server that exists </span><em><span>outside</span></em><span> of the AWS account that you use when your lab is running. Credentials are configured on the server that provide the same level of AWS service access via the terminal that you also have via the AWS Management Console.</span></p><p><i class="fas fa-info-circle"></i><span> Tip</span><strong><span>: A simple alternative to using this terminal in the browser is to use AWS CloudShell. You can access it in the AWS Management Console, at the top of the screen, by choosing the </span></strong><span>AWS CloudShell** icon (highlighted in red in the screen capture below).</span></p><p><span class='md-image'><img src="assets/cloudshell-prompt.png" alt="cloudshell icon" width="450" border="1px solid" align="left" /></span></p><p>&nbsp;</p><h3 id='a-idclicommandsarunning-aws-cli-commands'><a id="clicommands"></a><span>Running AWS CLI commands</span></h3><p><span>Here is an example AWS CLI command to try running in the terminal. If you have created any EC2 instances in the default account Region, running this command will provide information about them:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">aws ec2 describe-instances</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>See the </span><a href="https://docs.aws.amazon.com/cli/latest/reference/" target=_blank><span>AWS CLI Command Reference</span></a><span> documentation for details on how to use the AWS CLI.</span></p><p>&nbsp;</p><h3 id='a-idsdkausing-the-aws-sdk-for-python'><a id="sdk"></a><span>Using the AWS SDK for Python</span></h3><p><span>The terminal also has Python 3 installed with the boto3 library available. You can use it to run AWS Python SDK code. For example:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="python"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-error">$</span> <span class="cm-variable">python3</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&gt;&gt;&gt;</span> <span class="cm-keyword">import</span> <span class="cm-variable">boto3</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&gt;&gt;&gt;</span> <span class="cm-variable">ec2</span> = <span class="cm-variable">boto3</span>.<span class="cm-property">client</span>(<span class="cm-string">'ec2'</span>, <span class="cm-variable">region_name</span>=<span class="cm-string">'us-east-1'</span>) &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&gt;&gt;&gt;</span> <span class="cm-variable">ec2</span>.<span class="cm-property">describe_regions</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&gt;&gt;&gt;</span> <span class="cm-variable">exit</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-error">$</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 132px;"></div><div class="CodeMirror-gutters" style="display: none; height: 132px;"></div></div></div></pre><p><span>See the </span><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target=_blank><span>documentation</span></a><span> for details on how to use the AWS SDK for Python.</span></p><p>&nbsp;</p><h2 id='a-idec2aaccessing-ec2-instances'><a id="ec2"></a><span>Accessing EC2 Instance(s)</span></h2><p><span>When launching EC2 instances in the default us-east-1 Region in this environment, choose the option to use the existing key pair named </span><strong><em><span>vockey</span></em></strong><span> at the time of launch.  Then:</span></p><ul><li><p><span>Choose the </span><i class="fas fa-info"></i><span> </span><strong><span>AWS Details</span></strong><span> link above these instructions.</span></p><ul><li><span>If you are using a Windows desktop or laptop, choose the </span><strong><span>Download PPK</span></strong><span> button and save the </span><strong><span>labsuser.ppk</span></strong><span> file. You can use this file to connect via SSH to a Linux EC2 instance or Windows EC2 instance, typically using a tool such as PuTTY.</span></li><li><span>If you are using a MacOS desktop or laptop, choose the </span><strong><span>Download PEM</span></strong><span> button and save the </span><strong><span>labsuser.pem</span></strong><span> file. You can use this file to connect via SSH to a Linux EC2 instance or Windows EC2 instance, typically using a terminal window.</span></li></ul></li><li><p><strong><span>To connect via Remote Desktop to a Windows EC2 instance</span></strong><span>:</span></p><ul><li><span>In the EC2 Console, choose </span><strong><span>Instances</span></strong><span> and choose the instance you want to connect to</span></li><li><span>From the </span><strong><span>Actions</span></strong><span> menu choose </span><strong><span>Get Windows Password</span></strong></li><li><span>Next to </span><em><span>Key Pair Path</span></em><span> choose </span><strong><span>Browse</span></strong><span>.</span></li><li><span>Browse to and select the labsuser.pem file you downloaded earlier.</span></li><li><span>Choose </span><strong><span>Decrypt Password</span></strong><span>.</span></li><li><span>The connection information will now display, including the instance&#39;s Public DNS, Administrator user name, and the decrypted password.</span></li><li><span>Use a Remote Desktop Protocol (RDP) client to connect to the desktop of the EC2 instance using these connection details.</span></li><li><strong><span>To connect using SSH to a Linux instance, see the next section</span></strong><span>.</span></li></ul></li></ul><h2 id='a-idsshassh-access-to-an-ec2-instance-you-launch'><a id="ssh"></a><span>SSH access to an EC2 Instance you launch</span></h2><p><span>The steps below describe how to use the SSH key to connect to your instance.  </span></p><p><strong><span>Tip</span></strong><span>: Assuming you launched the instance with the vockey key pair, and that you have opened TCP port 22 in the instance&#39;s security group, you can also SSH to an EC2 instance by using the terminal to the side of these instructions. The terminal already has the key pair available to it. Simply enter the command </span><code>ssh -i ~/.ssh/labsuser.pem ec2-user@&lt;public-ip&gt;</code><span> where </span><code>&lt;public-ip&gt;</code><span> is the actual IPv4 public address of the instance.</span></p><h3 id='a-idsshwindowsai-classfab-fa-windowsi-windows-users-using-ssh-to-connect'><a id="sshwindows"></a><i class="fab fa-windows"></i><span> Windows Users: Using SSH to Connect</span></h3><p><i class="fas fa-comment"></i><span> These instructions are for Windows users only.</span></p><ol start='' ><li><p><span>Download needed software.</span></p><ul><li><span>You will use </span><strong><span>PuTTY</span></strong><span> to SSH to Amazon EC2 instances. If you do not have PuTTY installed on your computer, </span><a href="https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe"><span>download it here</span></a><span>.</span></li></ul></li><li><p><span>Open </span><strong><span>putty.exe</span></strong></p></li><li><p><span>Configure PuTTY to not timeout:</span></p><ul><li><span>Choose </span><strong><span>Connection</span></strong></li><li><span>Set </span><strong><span>Seconds between keepalives</span></strong><span> to </span><code>30</code></li></ul><p><span>This allows you to keep the PuTTY session open for a longer period of time.</span></p></li><li><p><span>Configure your PuTTY session:</span></p><ul><li><span>Choose </span><strong><span>Session</span></strong></li><li><strong><span>Host Name (or IP address):</span></strong><span> Copy and paste the </span><strong><span>IPv4 Public IP address</span></strong><span> for the instance. To find it, return to the EC2 Console and choose </span><strong><span>Instances</span></strong><span>. Check the box next to the instance and in the </span><em><span>Description</span></em><span> tab copy the </span><strong><span>IPv4 Public IP</span></strong><span> value.</span></li><li><span>Back in PuTTy, in the </span><strong><span>Connection</span></strong><span> list, expand </span><i class="far fa-plus-square"></i><span> </span><strong><span>SSH</span></strong></li><li><span>Choose </span><strong><span>Auth</span></strong><span> (don&#39;t expand it)</span></li><li><span>Choose </span><strong><span>Browse</span></strong></li><li><span>Browse to and select the .ppk file that you downloaded</span></li><li><span>Choose </span><strong><span>Open</span></strong><span> to select it</span></li><li><span>Choose </span><strong><span>Open</span></strong></li></ul></li><li><p><span>Choose </span><strong><span>Yes</span></strong><span>, to trust the host and connect to it.</span></p></li><li><p><span>When prompted </span><strong><span>login as</span></strong><span>, enter: </span><code>ec2-user</code></p><p><span>This will connect you to the EC2 instance.</span></p></li></ol><p>&nbsp;</p><h3 id='a-idsshmacamacos-i-classfab-fa-applei-and-linux-i-classfab-fa-linuxi-users---using-ssh-to-connect'><a id="sshmac"></a><span>macOS </span><i class="fab fa-apple"></i><span> and Linux </span><i class="fab fa-linux"></i><span> Users - Using SSH to Connect</span></h3><p><span>These instructions are for Mac/Linux users only.</span></p><ol start='' ><li><p><span>Read through the two bullet points in this step before you start to complete the actions, because you will not be able see these instructions when the AWS Details panel is open.</span></p><ul><li><p><span>Choose the </span><i class="fas fa-info"></i><span> </span><strong><span>AWS Details</span></strong><span> link above these instructions.</span></p></li><li><p><span>Choose the </span><strong><span>Download PEM</span></strong><span> button and save the </span><strong><span>labsuser.pem</span></strong><span> file.</span></p><p><span>Typically your browser will save it to the Downloads directory.</span></p></li></ul></li><li><p><span>Open a terminal window, and change directory </span><code>cd</code><span> to the directory where the .pem file was downloaded.</span></p><p><span>For example, run this command, if it was saved to your Downloads directory:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="plain"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="plain"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">cd ~/Downloads</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre></li><li><p><span>Change the permissions on the key to be read only, by running this command:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="plain"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="plain"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">chmod 400 labsuser.pem</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre></li><li><p><span>Return to the AWS Management Console, and in the EC2 service, choose </span><strong><span>Instances</span></strong><span>.</span></p><p><span>Check the box next to the instance you want to connect to.</span></p></li><li><p><span>In the </span><em><span>Description</span></em><span> tab, copy the </span><strong><span>IPv4 Public IP</span></strong><span> value.</span></p></li><li><p><span>Return to the terminal window and run this command (replace </span><strong><span>&lt;public-ip</span><span>&gt;</span></strong><span> with the actual public IP address you copied):</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="plain"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="plain"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ssh -i &lt;filename&gt;.pem ec2-user@&lt;public-ip&gt;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre></li><li><p><span>Type </span><code>yes</code><span> when prompted to allow a first connection to this remote SSH server.</span></p><p><span>Because you are using a key pair for authentication, you will not be prompted for a password.</span></p></li></ol></div></div>
+</body>
+</html>

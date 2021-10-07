@@ -1,0 +1,442 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowAllActions1",
+            "Effect": "Allow",
+            "Action": [
+                "access-analyzer:*",
+                "application-autoscaling:*",
+                "autoscaling:*",
+                "aws-marketplace:ViewSubscriptions",
+                "cloud9:*",
+                "cloudformation:*",
+                "cloudshell:*",
+                "cloudtrail:*",
+                "cloudwatch:*",
+                "codecommit:*",
+                "cognito-identity:*",
+                "cognito-idp:*",
+                "cognito-sync:*",
+                "compute-optimizer:GetEnrollmentStatus",
+                "comprehend:*",
+                "databrew:*",
+                "deepracer:*",
+                "dynamodb:*",
+                "ebs:*",
+                "ec2:*",
+                "ec2messages:*",
+                "ecr:*",
+                "elastic-inference:*",
+                "elasticbeanstalk:*",
+                "elasticfilesystem:*",
+                "elasticloadbalancing:*",
+                "elbv2:*",
+                "events:*"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestedRegion": [
+                        "us-east-1",
+                        "us-west-2"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowAllActions2",
+            "Effect": "Allow",
+            "Action": [
+                "forecast:*",
+                "glue:*",
+                "groundtruthlabeling:*",
+                "kms:*",
+                "lambda:*",
+                "lex:*",
+                "lightsail:*",
+                "logs:*",
+                "polly:*",
+                "rds:*",
+                "rekognition:*",
+                "resource-groups:*",
+                "robomaker:*",
+                "s3:*",
+                "sagemaker:*",
+                "secretsmanager:*",
+                "servicecatalog:*",
+                "sns:*",
+                "sqs:*",
+                "ssm:*",
+                "ssmmessages:*",
+                "states:*",
+                "sts:*",
+                "tag:*",
+                "textract:*",
+                "translate:*",
+                "trustedadvisor:*",
+                "wellarchitected:*"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestedRegion": [
+                        "us-east-1",
+                        "us-west-2"
+                    ]
+                }
+            }
+        },
+        {
+          "Sid": "IamAllowServiceLinkedRoleCreation",
+          "Effect": "Allow",
+          "Action": "iam:CreateServiceLinkedRole",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/*"
+        },
+        {
+            "Sid": "IamLimited",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AddRoleToInstanceProfile",
+                "iam:CreateInstanceProfile",
+                "iam:CreatePolicy",
+                "iam:CreateServiceLinkedRole",
+                "iam:DeleteInstanceProfile",
+                "iam:DeletePolicy",
+                "iam:DeleteRole",
+                "iam:DeleteRolePolicy",
+                "iam:DeleteServiceLinkedRole",
+                "iam:Describe*",
+                "iam:Get*",
+                "iam:List*",
+                "iam:*LoginProfile",
+                "iam:Remove*",
+                "iam:Sim*",
+                "iam:UpdateInstanceProfile",
+                "iam:UpdatePolicy",
+                "iam:UpdateRoleDescription",
+                "iam:UpdateServiceLinkedRole"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "IamNoView",
+            "Action": [
+                "iam:Delete*",
+                "iam:Update*"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:policy/*VocLabPolicy*",
+                "arn:aws:iam::*:role/LabRole"
+            ],
+            "Effect": "Deny"
+        },
+        {
+            "Sid": "LambdaNoView",
+            "Action": [
+                "lambda:Add*",
+                "lambda:Create*",
+                "lambda:Delete*",
+                "lambda:Publish*",
+                "lambda:Put*",
+                "lambda:Remove*",
+                "lambda:Update*",
+                "events:Deactivate*",
+                "events:Disable*",
+                "events:Delete*",
+                "events:Put*",
+                "events:Remove*",
+                "events:Update*"
+            ],
+            "Resource": [
+                "arn:aws:lambda:us-east-1:*:function:MonitoringFunction",
+                "arn:aws:events:us-east-1:*:rule/MonitoringScheduledRule"
+            ],
+            "Effect": "Deny"
+        },
+        {
+            "Sid": "DenyNoConds",
+            "Effect": "Deny",
+            "Action": [
+                "aws-portal:ModifyBilling",
+                "aws-portal:ModifyAccount",
+                "aws-portal:ViewAccount",
+                "aws-portal:ViewPaymentMethods",
+                "aws-portal:ModifyPaymentMethods",
+                "dynamodb:*Reserved*",
+                "ebs:FastSnapshotRestore",
+                "ec2:*Fpga*",
+                "ec2:*Spot*",
+                "ec2:*ReservedInstances*",
+                "ec2:*Scheduled*",
+                "ec2:*Purchase*",
+                "ec2:AcceptVpcEndpointConnections",
+                "ec2:AttachVpnGateway",
+                "ec2:CreateCapacityReservation",
+                "ec2:CreateCustomerGateway",
+                "ec2:CreateVpnConnectionRoute",
+                "ec2:CreateVpnGateway",
+                "ec2:EnableFastSnapshotRestores",
+                "ec2:GetHostReservationPurchasePreview",
+                "ec2:RunScheduledInstances",
+                "glacier:*VaultLock",
+                "rds:Purchase*",
+                "redshift:AcceptReservedNodeExchange",
+                "redshift:PurchaseReservedNodeOffering",
+                "route53domains:RegisterDomain",
+                "s3:*ObjectLegalHold",
+                "s3:*ObjectRetention",
+                "s3:*BucketObjectLock*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "AsgRestrict",
+            "Action": [
+                "autoscaling:CreateLaunchConfiguration"
+            ],
+            "Effect": "Deny",
+            "Resource": "*",
+            "Condition": {
+                "ForAnyValue:StringNotLike": {
+                    "autoscaling:InstanceType": [
+                        "*.nano",
+                        "*.small",
+                        "*.micro",
+                        "*.medium",
+                        "*.large"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "RestrictCloud9",
+            "Effect": "Deny",
+            "Action": [
+                "cloud9:UpdateEnvironment*",
+                "cloud9:CreateEnvironment*"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ForAnyValue:StringNotLikeIfExists": {
+                    "cloud9:InstanceType": [
+                        "*.nano",
+                        "*.micro",
+                        "*.small",
+                        "*.medium",
+                        "*.large",
+                        "c4.xlarge"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "Ec2RestrictPlacementGroup",
+            "Action": "ec2:*Instance*",
+            "Effect": "Deny",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "ec2:PlacementGroupStrategy": "cluster"
+                }
+            }
+        },
+        {
+            "Sid": "Ec2DenyTenancy",
+            "Action": "ec2:*Instance*",
+            "Effect": "Deny",
+            "Resource": "arn:aws:ec2:*:*:instance/*",
+            "Condition": {
+                "StringNotLike": {
+                    "ec2:Tenancy": "default"
+                }
+            }
+        },
+        {
+            "Sid": "Ec2RestrictInstanceTypes",
+            "Action": [
+                "ec2:RunInstances",
+                "ec2:StartInstances"
+            ],
+            "Effect": "Deny",
+            "Resource": "arn:aws:ec2:*:*:instance/*",
+            "Condition": {
+                "ForAnyValue:StringNotLike": {
+                    "ec2:InstanceType": [
+                        "*.nano",
+                        "*.micro",
+                        "*.small",
+                        "*.medium",
+                        "*.large"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "Ec2RestrictNonAWSAMIs",
+            "Action": "ec2:RunInstances",
+            "Effect": "Deny",
+            "Resource": [
+                "arn:aws:ec2:*:*:image/*"
+            ],
+            "Condition": {
+                "StringNotEqualsIgnoreCaseIfExists": {
+                    "ec2:Owner": "amazon"
+                }
+            }
+        },
+        {
+            "Sid": "Ec2RestrictLargeVolumes",
+            "Action": [
+                "ec2:RunInstances",
+                "ec2:CreateVolume"
+            ],
+            "Effect": "Deny",
+            "Resource": "arn:aws:ec2:*:*:volume/*",
+            "Condition": {
+                "NumericGreaterThanIfExists": {
+                    "ec2:VolumeSize": "101"
+                }
+            }
+        },
+        {
+            "Sid": "Ec2RestrictPIOPSVolumes",
+            "Action": [
+                "ec2:RunInstances",
+                "ec2:CreateVolume"
+            ],
+            "Effect": "Deny",
+            "Resource": "arn:aws:ec2:*:*:volume/*",
+            "Condition": {
+                "StringNotLikeIfExists": {
+                    "ec2:VolumeType": [
+                        "gp2",
+                        "gp3",
+                        "sc1",
+                        "standard"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "RdsAllow",
+            "Action": [
+                "rds:*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*",
+            "Condition": {
+                "ForAnyValue:StringLikeIfExists": {
+                    "rds:DatabaseClass": [
+                        "*.nano",
+                        "*.small",
+                        "*.micro",
+                        "*.medium"
+                    ],
+                    "rds:DatabaseEngine": [
+                        "aurora-mysql",
+                        "aurora-postgresql",
+                        "mysql",
+                        "postgres",
+                        "mariadb"
+                    ]
+                },
+                "NumericLessThanIfExists": {
+                    "rds:StorageSize": "101"
+                }
+            }
+        },
+        {
+            "Sid": "RdsNoMultiAz",
+            "Effect": "Deny",
+            "Action": [
+                "rds:CreateDBInstance",
+                "rds:ModifyDBInstance"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "BoolIfExists": {
+                    "rds:MultiAz": "true"
+                }
+            }
+        },
+        {
+            "Sid": "RdsPiops",
+            "Action": [
+                "rds:CreateGlobalCluster",
+                "rds:CreateDBInstanceReadReplica",
+                "rds:StartDB*",
+                "rds:ModifyDBCluster",
+                "rds:ModifyCurrentDBClusterCapacity",
+                "rds:ModifyDBClusterEndpoint",
+                "rds:ModifyDBInstance",
+                "rds:ModifyGlobalCluster",
+                "rds:RestoreDB*",
+                "rds:RebootDBInstance"
+            ],
+            "Effect": "Deny",
+            "Resource": "*",
+            "Condition": {
+                "NumericNotEqualsIfExists": {
+                    "rds:Piops": "0"
+                }
+            }
+        },
+        {
+            "Sid": "SmAllowSpecificModelTraining",
+            "Effect": "Deny",
+            "Action": [
+                "sagemaker:CreateNotebookInstance",
+                "sagemaker:CreateTrainingJob",
+                "sagemaker:CreateTransformJob",
+                "sagemaker:CreateEndpointConfig",
+                "sagemaker:CreateHyperParameterTuningJob",
+                "sagemaker:UpdateNotebookInstance"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Condition": {
+                "ForAnyValue:StringNotLike": {
+                    "sagemaker:InstanceTypes": [
+                        "ml.*.medium",
+                        "ml.*.large",
+                        "ml.*.xlarge"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "ServiceLinkedRoleAndPolicies",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachRolePolicy",
+                "iam:DetachRolePolicy",
+                "iam:PassRole",
+                "iam:PutRolePolicy",
+                "iam:UpdateAssumeRolePolicy",
+                "iam:UpdateRole"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLikeIfExists": {
+                    "iam:AWSServiceName": [
+                        "*.amazonaws.com"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "IamPolicies",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachRolePolicy",
+                "iam:DetachRolePolicy",
+                "iam:PutRolePolicy",
+                "iam:UpdateAssumeRolePolicy",
+                "iam:UpdateRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/service-role/*"
+        }
+    ]
+}
